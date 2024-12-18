@@ -5,7 +5,7 @@ metadata:
 spec:
   destination:
     namespace: tsprojet
-    server: https://kubernetes.default.svc:443
+    server: https://kubernetes.default.svc
   source:
     path: helm
     repoURL: https://github.com/benoit-planche/tsprojet

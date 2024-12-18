@@ -29,18 +29,6 @@ env:
   DB_PASSWORD: "postgres"
   DB_DATABASE: "postgres"
 
-ingress:
-  enabled: true
-  className: "traefik"
-  annotations: {}
-  hosts:
-  # Dynamically set the host
-    - host: chart-example.local
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: []
-  
 # This is for the secretes for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 imagePullSecrets: []
 # This is to override the chart name.

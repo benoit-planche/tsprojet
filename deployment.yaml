@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adonis-app
+spec:
+  selector:
+    matchLabels:
+      app: adonis
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: adonis
+    spec:
+      containers:
+      - name: webapp
+        image: bplanche/adonis_app:latest
+        ports:
+        - containerPort: 3333
+        env:
+          - name: PORT
+            value: "3333"
+          - name: HOST
+            value: "0.0.0.0"
+          - name: APP_KEY
+            value: "IXfsLyvx6f2CA4LeHG9yY55Grmz1GBM8"
+          - name: LOG_LEVEL
+            value: "info"
+          - name: SESSION_DRIVER
+            value: "cookie"
+          - name: DB_HOST
+            value: "pg-service"
+          - name: DB_PORT
+            value: "5432"
+          - name: DB_USER
+            value: "postgres"
+          - name: DB_PASSWORD
+            value: "postgres"
+          - name: DB_DATABASE
+            value: "postgres"

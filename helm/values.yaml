@@ -23,7 +23,7 @@ env:
   POSTGRES_USER: "postgres"
   POSTGRES_PASSWORD: "postgres"
   POSTGRES_DB: "postgres"
-  DB_HOST: "162.38.112.162"
+  DB_HOST: "pg-service"
   DB_PORT: "5432"
   DB_USER: "postgres"
   DB_PASSWORD: "postgres"
